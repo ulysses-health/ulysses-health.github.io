@@ -6,9 +6,33 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <title>Medical Cloud AI</title>
+    <title>Ulysses Medical Cloud AI</title>
+    <script>
+        function newLead() {
+            var email = document.querySelector("input[type=text][name=email]").value;
+            var url = "https://ulysses-leads.azurewebsites.net/new-lead?email=" + email;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.send();
+
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.err == 0) {
+                        // showSuccessMessage(response.text);
+                    } else {
+                        // showErrorMessage(response.text);
+                    }
+                }
+            };
+            return false;
+        }
+
+      
+    </script>
 </head>
 <body>
+
     <header>
         <div class="container-header">
             <h1 class="company-name">Ulysses AI</h1>
@@ -16,16 +40,9 @@
     </header>
 
     <div class="payoff">
-        <h2>Your New Custom <span class="highlight-text">AI-Powered Clinical Assistant</span></h2>
+        <h2>Secure & private AI and semantic <br /> search for Healthcare </h2>
     </div>
     
-    <section class="video-section">
-        <div class="container">
-            <div class="video-container">
-                <!-- You can embed your sample video here -->
-            </div>
-        </div>
-    </section>
     
     <section class="features">
         <div class="feature-box">
@@ -41,11 +58,39 @@
             <p>Our AI solution is designed to meet the unique requirements of the medical field.</p>
         </div>
     </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <video width="500" height="281.25" controls>
+                    <source src="AIULYSSES.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
     
     <section class="join-waitlist">
         <div class="container">
-            <h2><a href="mailto:waitlist@ulysses.health?subject=Add me to the waitlist&body=Hi please add me to the waitlist">Join Waitlist</a></h2>
-            <p>Be among the first to experience the future of medical AI.</p>
+            <h2>Join the Waitlist</h2>
+            <p>Be among the first to experience the future of medical AI.
+                <form action="#">
+                    <input name="email" type="text" placeholder="Enter your email address" />
+                    <button type="button" class="btn" onclick="newLead()">Join</button>
+                </form>
+            </p>
+            <br />
+        </div>
+    </section>
+    <section class="footer-section">
+        <!-- make the style of this div so that the image is aligned to the left -->
+        <div class="logo">
+            <!-- scale the following image to be 20% of its original size -->
+            <img src="static/logo_big.webp" alt="logo" class="footer-logo" 
+            style="width: 80px; height: auto; margin: 0 auto; display: block;">
+        </div>
+        <div class="company-desc">
+            <h4> Ulysses AI </h4> <span> Cloud-based AI for Global Healthcare Industry </span>
         </div>
     </section>
 </body>

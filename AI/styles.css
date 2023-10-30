@@ -11,11 +11,19 @@ body {
     font-family: 'Raleway', Arial, sans-serif; /* Use 'Raleway' as the primary font */
     background-color: #fff;
     color: #000;
+    /* add a background image that is 0.5 transparent */
+    background-image: url("bg.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background-color: #fff; */
+
 }
 
 /* Header styles */
 header {
-    background: #302e2e; /* Change the header color to black */
+    background: #171717; /* Change the header color to black */
     /* display: flex; */
    /* align-items: last baseline; */
    text-align: left;
@@ -29,20 +37,22 @@ header {
 }
 
 .company-name {
-    color: #18c692de; /* Darker green color for the company name */
+   color: #fff;/*#004858ff; #0da39f; linear-gradient(to right, #0da39f, #004858ff); /*#18c692de; /* Darker green color for the company name */
    text-align: left;
-   font-size: 2rem;
+   font-size: 40px;
 }
 
 /* Payoff styles */
 .payoff {
-    background: linear-gradient(to right, #008a63, #0a6b6e); /* Darker green gradient */
+     background:  linear-gradient(to bottom, rgba(8, 100, 97), rgba(0, 72, 88, 0.8)); /* Darker green gradient */
     text-align: center;
     padding: 2rem 0;
+    min-height: 400px;
+
 }
 
 .payoff h2 {
-    font-size: 2.5rem;
+    font-size: 73px;
     color: #fff;
     font-family: 'Raleway', sans-serif; /* Use 'Raleway' for the payoff text */
 }
@@ -53,46 +63,48 @@ header {
 
 /* Container styles */
 .container-header {
-    max-width: 400px; /* Smaller container width */
+    /*max-width: 400px; /* Smaller container width */
     margin: 0;
     padding: 0 20px;
 }
 
 .container {
-    max-width: 400px; /* Smaller container width */
+    max-width: 800px; /*Smaller container width*/
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 /* Video section styles */
 .video-section {
-    background-color: #fff;
+    background-color: rgba(255,255,255, 0.8);
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .video-container {
+    margin: 0 auto;
+    padding: 0 20px;
     /* Style your video container here */
 }
 
 /* Features section styles */
 .features {
-    background-color: #fff;
+    background-color: rgba(255,255,255, 0.8);
     padding: 2rem 0;
     display: flex;
     justify-content: space-between; /* Horizontal layout, one next to the other */
-    max-width: 800px; /* Set a maximum width for the container */
+    /* max-width: 800px; Set a maximum width for the container */
     justify-content: center; /* Center the feature boxes horizontally */
     align-items: center; /* Center the feature boxes vertically */
-    max-width: 1000px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container */
 }
+
 
 .feature-box {
     width: 30%; /* Narrower feature boxes */
     text-align: center;
     padding: 20px;
-    border: 1px solid #ddd; /* Smooth borders around feature boxes */
+    /* border: 1px solid #ddd; Smooth borders around feature boxes */
     border-radius: 8px;
     margin: 0 5px; /* Reduce the space between feature boxes */
     font-family: 'Raleway', sans-serif; /* Use 'Raleway' for feature box text */
@@ -100,25 +112,31 @@ header {
     height: auto;
     min-height: 160px;
     font-family: "Inter";
+    font-size: 20px;
 }
 
 
 .feature-box h3 {
     color: #0a6b6e;
     font-family: Inter;
+    font-size: 30px;
+    margin-bottom: 10px;
+
 }
 
 /* Join Waitlist section styles */
 .join-waitlist {
-    background-color: #fff;
+    background-color: rgba(255,255,255, 0.8);
     text-align: center;
     font-family: Raleway;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
+    font-size: 20px;
 }
 
 .join-waitlist h2 {
     color: #0a6b6e;
     font-family: Raleway;
+    font-size: 45px;
 }
 
 .join-waitlist p {
@@ -136,6 +154,7 @@ header {
     margin-right: 10px;
     border: 1px solid #0a6b6e;
     border-radius: 4px;
+    font-size: 20px;
 }
 
 .join-waitlist button {
@@ -146,4 +165,51 @@ header {
     border-radius: 4px;
     cursor: poRaleway;
     font-family: 'Raleway', sans-serif; /* Use 'Raleway' for the button text */
+    font-size: 20px;
+}
+
+.footer-section {
+
+background: #171717; /* Change the header color to black */
+/* display: flex; */
+/* align-items: last baseline; */
+text-align: left;
+padding: 1rem 0;
+font-family: Raleway;
+align-content: flex-start;    
+display: flex;
+
+}
+
+.logo {
+    width: 150px;
+    align-content: flex-start;
+}
+
+.company-desc {
+    color: #fff;
+    font-size: 20px;
+    font-family: Raleway;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+.company-desc h4 {
+    margin-bottom: 8px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-family: Raleway;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    font-family: Raleway;
+    margin-left: 0px;
+    margin-top: 10px;
 }
